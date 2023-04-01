@@ -1,0 +1,20 @@
+<div [ngClass]="{'cuadricle-view' : listView == false,  'list-view': listView == true}">
+
+    <div [ngClass]="'products-container_title'">
+        <h3> Listado de productos ({{productsAmount}})</h3>
+    </div>
+
+    <button (click)="changeToggle()"><img src="/assets/images/cuadricula.png" alt="cuadricula"></button>
+    <button (click)="changeToggle()"><img src="/assets/images/elementos-de-lista.png" alt="lista"></button>
+
+    <div [ngClass]="'products-container_input'">
+        <!-- el evento tiene que ir en minusculas -->
+        <input type="text" [(ngModel)]="name" (keydown)="searchProduct()">
+    </div>
+    <div  [ngClass]="'product-card'" *ngFor="let product of searchedProducts">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,15 @@
+<header [ngClass]="'header'">
+    <div [ngClass]="'header-title'">
+        <div [ngClass]="'header-title_image'">
+            <img src="{{image.src}}" alt="{{image.alt}}">
+        </div>
+        <div [ngClass]="'header-title_text'">
+            <h2>Shopeame!</h2>
+        </div>
+    </div>
+    <nav [ngClass]="'header-nav'">
+        <a routerLink="/"> Home </a>
+        <a routerLink="/products"> Products </a>
+        <a routerLink="/create"> Create </a>
+    </nav>
+</header>

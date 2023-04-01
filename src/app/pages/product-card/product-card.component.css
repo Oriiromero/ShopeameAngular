@@ -1,0 +1,15 @@
+.star-box {
+  width: 20px;
+}
+.star-box .star-box-test {
+  display: flex;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  background-color: #F7C04A;
+}
+.star-box .star-box-star {
+  width: 80px;
+  height: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=product-card.component.css.map */
