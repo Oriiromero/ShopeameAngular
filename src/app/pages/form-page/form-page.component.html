@@ -4,20 +4,39 @@
         <h3> Creacion de productos </h3>
     </div>
 
-    <form [ngClass]="'form'" #productsForm="ngForm" (ngSubmit)="postProducts(productsForm.value)">
-        <input [ngClass]="'form-input'" type="text" name="image" placeholder="Image" ngModel>
-        
-        <input [ngClass]="'form-input'" type="text" name="name"  placeholder="Name" ngModel>
-
-        <input [ngClass]="'form-input'" type="number" name="price"  placeholder="Price" ngModel>
-
-        <input [ngClass]="'form-input'" type="text" name="description"  placeholder="Description" ngModel>
-
-        <input [ngClass]="'form-input'" type="number" name="stars"  placeholder="Stars" ngModel>
-
-        <input [ngClass]="'form-input'" type="submit" value="Create"> 
-    </form>
-
-
-
+    <div [ngClass]="'box'">
+        <form [ngClass]="'form'" #productsForm="ngForm" (ngSubmit)="postProducts(productsForm.value)">
+            <input [ngClass]="'form-input'" type="text" name="image" placeholder="Image" [(ngModel)]="product.image">
+            
+            <input [ngClass]="'form-input'" type="text" name="name"  placeholder="Name"  [(ngModel)]="product.name">
+    
+            <input [ngClass]="'form-input'" type="number" name="price"  placeholder="Price"  [(ngModel)]="product.price">
+    
+            <input [ngClass]="'form-input'" type="text" name="description"  placeholder="Description"  [(ngModel)]="product.description">
+    
+            <input [ngClass]="'form-input'" type="number" name="stars"  placeholder="Stars"  [(ngModel)]="product.stars" [ngModel]="calculatePixels()">
+    
+            <input [ngClass]="'form-input'" type="submit" value="Create"> 
+        </form>
+    
+        <div ngClass="'preview'">
+            <h5> Preview del producto: </h5>
+            <img [ngClass]="'product-card_img_image'" src="{{product.image}}">
+            <div [ngClass]="'product-card_info'">
+                <h4 [ngClass]="'product-card_info_name'"> {{product.name}} </h4>
+                <p [ngClass]="'product-card_info_price'" *ngIf="!(product.price == undefined)"> ${{product.price}} </p>
+                <p [ngClass]="'product-card_info_description'"> {{product.description}} </p>
+                <div *ngIf="!(product.stars == undefined)" [ngClass]="'star-box'">
+                    <div [ngClass]="'star-box-test'" [ngStyle]="{ 'width.px': pixelPercentage }">
+                        <img  [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
+                        <img  [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
+                        <img [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
+                        <img [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
+                        <img [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
+                    </div>
+                </div> 
+                <p *ngIf="!(product.stars == undefined)" [ngClass]="'product-card_info_stars'"> {{product.stars}} </p>
+        </div>
+    </div>
+   
 </div>

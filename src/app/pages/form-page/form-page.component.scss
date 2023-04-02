@@ -1,11 +1,16 @@
-.form {
+.box {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
 
-    .form-input{
-        margin: 15px;
-        width: 450px;
-        height: 50px;
+    .form {
+        display: flex;
+        flex-direction: column;
+    
+        .form-input{
+            margin: 15px;
+            width: 450px;
+            height: 50px;
+        }
     }
 }
 
