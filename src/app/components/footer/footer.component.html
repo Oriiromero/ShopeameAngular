@@ -1,14 +1,16 @@
 <footer [ngClass]="'footer'">
-    <div [ngClass]="'footer-title'">
-        <h5> Siguenos en: </h5>
+    <div [ngClass]="'footer__links'">
+        <div [ngClass]="'footer__links_title'">
+            <h5> Siguenos en: </h5>
+        </div>
+        <div [ngClass]="'footer__links_a'">
+            <a href="" >Twitter</a>
+            <a href="" >Facebook</a>
+            <a href="" >Instagram</a>
+            <a href="" >TikTok</a>
+        </div>
     </div>
-    <div [ngClass]="'footer-links'">
-        <a href="" >Twitter</a>
-        <a href="" >Facebook</a>
-        <a href="" >Instagram</a>
-        <a href="" >TikTok</a>
-    </div>
-    <div [ngClass]="'footer-copy'">
+    <div [ngClass]="'footer__copy'">
         <p> Copyright Shopeame ®2023 </p>
     </div>
 </footer>

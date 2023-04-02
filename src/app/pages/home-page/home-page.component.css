@@ -1,1 +1,28 @@
-/*# sourceMappingURL=home-page.component.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap");
+.title-container {
+  text-align: center;
+  margin: 15px 0 20px 0;
+  letter-spacing: 0.0275em;
+  font-family: "Inter", sans-serif;
+}
+.title-container_text {
+  color: #19191D;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 65px;
+}
+
+.info-container {
+  letter-spacing: 0.0275em;
+  font-family: "Inter", sans-serif;
+}
+.info-container_sec {
+  margin: 25px 0;
+  color: #19191D;
+}
+.info-container_ques {
+  margin: 50px 0 20px 0;
+}
+.info-container_p {
+  margin: 15px 0;
+}/*# sourceMappingURL=home-page.component.css.map */

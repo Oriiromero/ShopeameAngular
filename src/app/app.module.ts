@@ -11,6 +11,7 @@ import { FormPageComponent } from './pages/form-page/form-page.component';
 import { ProductCardComponent } from './pages/product-card/product-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     HomePageComponent,
     ProductsPageComponent,
     FormPageComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

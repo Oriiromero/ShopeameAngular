@@ -1,16 +1,24 @@
-<div [ngClass]="{'cuadricle-view' : listView == false,  'list-view': listView == true}">
-
-    <div [ngClass]="'products-container_title'">
+<div [ngClass]="'top-container'">
+    <div [ngClass]="'top-container_title'">
         <h3> Listado de productos ({{productsAmount}})</h3>
     </div>
-
-    <button (click)="changeToggle()"><img src="/assets/images/cuadricula.png" alt="cuadricula"></button>
-    <button (click)="changeToggle()"><img src="/assets/images/elementos-de-lista.png" alt="lista"></button>
-
-    <div [ngClass]="'products-container_input'">
-        <!-- el evento tiene que ir en minusculas -->
-        <input type="text" [(ngModel)]="name" (keydown)="searchProduct()">
+    <div [ngClass]="'top-container__inputs'">
+        <div [ngClass]="'top-container__inputs_buttons'">
+            <button  [ngClass]="{'top-container__inputs_buttons_btn_selectedOne': selected == true, 'top-container__inputs_buttons_btn': selected == false}" (click)="changeToggle()">
+                <img src="/assets/images/cuadricula.png" alt="cuadricula">
+            </button>
+            <button [ngClass]="{'top-container__inputs_buttons_btn_selectedOne': selectedTwo == true, 'top-container__inputs_buttons_btn': selectedTwo == false}" (click)="changeToggle()">
+                <img src="/assets/images/elementos-de-lista.png" alt="lista">
+            </button>
+        </div>
+        
+        <div [ngClass]="'top-container__inputs_searcher'">
+            <!-- el evento tiene que ir en minusculas -->
+            <input type="text" [(ngModel)]="name" (keydown)="searchProduct()" placeholder="Buscador">
+        </div>
     </div>
+</div>
+<div [ngClass]="{'cuadricle-view' : listView == false,  'list-view': listView == true}">
     <div  [ngClass]="'product-card'" *ngFor="let product of searchedProducts">
         <app-product-card [product]="product"></app-product-card>
     </div>

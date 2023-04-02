@@ -1,17 +1,69 @@
-.star-box{
-    width:20px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
 
-    .star-box-test{
-        display: flex;
-        width: 40px;
-        height: 20px;
-        background-color: transparent;
-        background-color: #F7C04A;
+.product-card {
+    width: 250px;
+    height: 400px;
+    box-shadow: 2px 2px 4px 4px #dedee3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_img {
+        margin: 35px 0;
+        width: 150px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
-      
-    .star-box-star {
-        width: 80px;
-        height: 20px;
-        cursor: pointer;
+
+    &_info {
+        padding: 10px;
+        font-family: 'Inter', sans-serif;
+
+        &_name {
+            font-size: 15px;
+            color: #19191D;
+            padding: 10px 0;
+        }
+
+        &_price{
+           font-size: 20px;
+           padding: 5px 0;
+        }
+
+        &_description {
+            font-size: 10px;
+            color: #787885;
+            padding: 10px 0;
+        }
+    }
+
+    .star-box{
+        width:20px;
+    
+        .star-box-test{
+            display: flex;
+            width: 40px;
+            height: 20px;
+            background-color: transparent;
+            background-color: #F7C04A;
+        }
+          
+        .star-box-star {
+            width: 80px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            margin-left: 25px;
+            color: #787885;
+            font-size: 13px;
+            line-height: 20px;
+        }
     }
 }

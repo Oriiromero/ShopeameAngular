@@ -20,6 +20,9 @@ export class ProductsPageComponent  implements OnInit{
 
   listView: boolean = false;
 
+  selected: boolean = true;
+  selectedTwo: boolean = false;
+
   constructor(private productsService: ProductsService ) { }
 
   ngOnInit(): void {
@@ -42,7 +45,11 @@ export class ProductsPageComponent  implements OnInit{
 
   changeToggle(){
     this.listView = !this.listView;
+
+    this.selected = !this.selected;
+    this.selectedTwo = !this.selectedTwo;
   }
+  
  
 
 }

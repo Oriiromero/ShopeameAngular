@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+
+
+.title-container{
+   text-align: center;
+   margin: 15px 0 20px 0;
+   letter-spacing: 0.0275em;
+   font-family: 'Inter', sans-serif;
+   
+
+   &_text {
+    color: #19191D;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 65px;
+   }
+}
+
+.info-container {
+    letter-spacing: 0.0275em;
+    font-family: 'Inter', sans-serif;
+
+    &_sec {
+        margin: 25px 0;
+        color: #19191D;
+    }
+
+    &_ques {
+        margin: 50px 0 20px 0;
+    }
+
+    &_p {
+        margin: 15px 0;
+    }
+}

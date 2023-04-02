@@ -1,18 +1,19 @@
-<div [ngClass]="'product-card_img'">
-    <img [ngClass]="'product-card_img_image'" src="{{product.image}}" alt="image">
-</div>
-<div [ngClass]="'product-card_info'">
-    <h4 [ngClass]="'product-card_info_name'"> {{product.name}} </h4>
-    <p [ngClass]="'product-card_info_price'"> ${{product.price}} </p>
-    <p [ngClass]="'product-card_info_description'"> {{product.description}} </p>
-    <div [ngClass]="'star-box'">
-        <div [ngClass]="'star-box-test'" [ngStyle]="{ 'width.px': pixelPercentage }">
-            <img  [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
-            <img  [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
-            <img [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
-            <img [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
-            <img [ngClass]="'star-box-star'" src="/assets/images/star.png" alt="star">
-        </div>
-    </div> 
-    <p [ngClass]="'product-card_info_stars'"> {{product.stars}} </p>
+<div [ngClass]="'product-card'">
+    <div [ngClass]="'product-card_img'">
+        <img [ngClass]="'product-card_img_image'" src="{{product.image}}" alt="image">
+    </div>
+    <div [ngClass]="'product-card_info'">
+        <p [ngClass]="'product-card_info_name'"> {{product.name}} </p>
+        <h4 [ngClass]="'product-card_info_price'"> ${{product.price}} </h4>
+        <p [ngClass]="'product-card_info_description'"> {{product.description}} </p>
+            <div [ngClass]="'star-box'">
+                <div [ngClass]="'star-box-test'" [ngStyle]="{ 'width.px': pixelPercentage }">
+                    <img  [ngClass]="'star-box-star'" src="/assets/images/Star_1.png" alt="star">
+                    <img  [ngClass]="'star-box-star'" src="/assets/images/Star_1.png" alt="star">
+                    <img [ngClass]="'star-box-star'" src="/assets/images/Star_1.png" alt="star">
+                    <img [ngClass]="'star-box-star'" src="/assets/images/Star_1.png" alt="star">
+                    <img [ngClass]="'star-box-star'" src="/assets/images/Star_1.png" alt="star">
+                    <p> {{product.stars}} </p>
+                </div>
+            </div> 
 </div>

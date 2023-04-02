@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+
+.header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #FFFFFF;
+
+    .header-title_image {
+        width: 40px;
+        margin: 3px 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .header-title_text {
+        margin: 3px 10px;
+
+       h2 {
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #0C2146
+
+       }
+    }
+}
+
+.header-nav {
+    background-color: #FFC970;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+    padding: 5px 0;
+
+    &__links{
+      width: 8%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__image{
+        width: 20px;
+        cursor: pointer;
+
+        img{
+            width: 100%;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        color: #444444;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &__links:hover {
+
+        border-radius: 5px;
+        background: rgba(235, 242, 255, 0.3);
+
+        &__image{
+            width: 20px;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+            }
+          }
+    
+          a {
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            color: #00579F;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+          }
+    }
+}
