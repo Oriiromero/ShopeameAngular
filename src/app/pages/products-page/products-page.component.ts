@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/shared/services/products.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductI } from 'src/app/shared/interfaces/card.interface';
 
 @Component({
   selector: 'app-products-page',
@@ -11,11 +12,11 @@ export class ProductsPageComponent  implements OnInit{
 
   name!: string;
 
-  products!: any;
+  products!: ProductI[];
 
   productsAmount!: number;
 
-  searchedProducts!: any;
+  searchedProducts!: ProductI[];
 
   listView: boolean = false;
 
@@ -33,7 +34,7 @@ export class ProductsPageComponent  implements OnInit{
   }
 
   searchProduct(){
-    this.searchedProducts = this.products.filter((product: any) => product.name.toLowerCase().includes(this.name));
+    this.searchedProducts = this.products.filter((product: ProductI) => product.name.toLowerCase().includes(this.name));
 
     console.log(this.name);
     console.log(this.searchedProducts);
