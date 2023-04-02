@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ProductI } from '../interfaces/card.interface';
 
 @Injectable({
   providedIn: 'root'

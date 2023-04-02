@@ -1,0 +1,23 @@
+<div [ngClass]="'form-area'">
+
+    <div [ngClass]="'form-title'">
+        <h3> Creacion de productos </h3>
+    </div>
+
+    <form [ngClass]="'form'" #productsForm="ngForm" (ngSubmit)="postProducts(productsForm.value)">
+        <input [ngClass]="'form-input'" type="text" name="image" placeholder="Image" ngModel>
+        
+        <input [ngClass]="'form-input'" type="text" name="name"  placeholder="Name" ngModel>
+
+        <input [ngClass]="'form-input'" type="number" name="price"  placeholder="Price" ngModel>
+
+        <input [ngClass]="'form-input'" type="text" name="description"  placeholder="Description" ngModel>
+
+        <input [ngClass]="'form-input'" type="number" name="stars"  placeholder="Stars" ngModel>
+
+        <input [ngClass]="'form-input'" type="submit" value="Create"> 
+    </form>
+
+
+
+</div>
