@@ -26,7 +26,7 @@ export class FormPageComponent {
   }
 
   postProducts(products: ProductI){
-    this.http.post("http://localhost:3000/products", products).subscribe((res)=> alert('Producto ya guardar'));
+    this.http.post("http://localhost:3000/products", products).subscribe((res)=> alert('Producto ya guardado.'));
   }
   
   ngOnInit(): void {
