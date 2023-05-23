@@ -10,6 +10,6 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts(){
-    return this.http.get("http://localhost:3000/products")
+    return this.http.get("https://shopeame-api.vercel.app/products")
   }
 }
